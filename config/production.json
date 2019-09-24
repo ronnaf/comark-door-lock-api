@@ -1,4 +1,10 @@
 {
-  "host": "comarkshit-app.feathersjs.com",
-  "port": "PORT"
+  "host": "https://comark-door-lock-api.herokuapp.com/",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 100,
+    "max": 200
+  },
+  "mongodb": "mongodb://ronna-v2:JP8_uX3Pc6FQkBd@ds055722.mlab.com:55722/comark-door-lock-db"
 }
