@@ -9,7 +9,10 @@ module.exports = function (app) {
 
   const options = {
     Model,
-    paginate
+    paginate: {
+      default: 50,
+      max: 100
+    }
   };
 
   // Initialize our service with any options it requires
