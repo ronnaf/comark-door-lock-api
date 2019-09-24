@@ -16,8 +16,8 @@ module.exports = function (app) {
   // This is necessary to avoid model compilation errors in watch mode
   // see https://github.com/Automattic/mongoose/issues/1251
   try {
-    return mongooseClient.model('logs');
+    return mongooseClient.model('rfid-logs');
   } catch (e) {
-    return mongooseClient.model('logs', logs);
+    return mongooseClient.model('rfid-logs', logs);
   }
 };
