@@ -1,5 +1,5 @@
 // Initializes the `rfid-logs` service on path `/rfid-logs`
-const { Logs } = require('./rfid-logs.class');
+const { RfidLogs } = require('./rfid-logs.class');
 const createModel = require('../../models/rfid-logs.model');
 const hooks = require('./rfid-logs.hooks');
 
@@ -13,7 +13,7 @@ module.exports = function (app) {
   };
 
   // Initialize our service with any options it requires
-  app.use('/rfid-logs', new Logs(options, app));
+  app.use('/rfid-logs', new RfidLogs(options, app));
 
   // Get our initialized service so that we can register hooks
   const service = app.service('rfid-logs');

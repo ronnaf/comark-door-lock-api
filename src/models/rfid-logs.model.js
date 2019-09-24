@@ -5,7 +5,7 @@
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
-  const logs = new Schema({
+  const rfidLogs = new Schema({
     authorized: { type: Boolean, required: true },
     rfid: { type: String, required: true },
     registeredName: { type: String }
@@ -18,6 +18,6 @@ module.exports = function (app) {
   try {
     return mongooseClient.model('rfid-logs');
   } catch (e) {
-    return mongooseClient.model('rfid-logs', logs);
+    return mongooseClient.model('rfid-logs', rfidLogs);
   }
 };
